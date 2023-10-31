@@ -18,6 +18,16 @@ const App = () => {
             .join(" ")
     );
   };
+  const convertirMinusculas = () => {
+    setTexto(
+      convertirTodas
+        ? texto.toLowerCase()
+        : texto
+            .split(" ")
+            .map((palabra) => palabra[0].toLowerCase() + palabra.slice(1))
+            .join(" ")
+    );
+  };
   const capitalizeText = () => {
     const newText = text.toUpperCase();
     setText(newText);
@@ -60,7 +70,13 @@ const App = () => {
             className="bg-green-500 px-4 py-2 rounded-md text-gray-900 font-medium"
             onClick={convertirMayusculas}
           >
-            CONVERTIR
+            MAYUSCULAS
+          </button>
+          <button
+            className="bg-green-500 px-4 py-2 rounded-md text-gray-900 font-medium"
+            onClick={convertirMinusculas}
+          >
+            minusculas
           </button>
           
         </div>
