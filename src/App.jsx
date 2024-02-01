@@ -42,6 +42,8 @@ const App = () => {
   };
 
   return (
+    <main>
+    
     <div className=" flex flex-col justify-center items-center min-h-screen gap-4 h-screen bg-gradient-to-br from-indigo-500 to-indigo-800">
     
       <div className="w-full flex justify-center">
@@ -104,6 +106,7 @@ const App = () => {
         </div>
       </div>
     </div>
+      </main>
   )
 }
 
